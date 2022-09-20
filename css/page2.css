@@ -1,0 +1,439 @@
+body {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+/* 头部 */
+.header {
+    width: 100%;
+    height: 900px;
+    text-align: center;
+    padding-top: 300px;
+}
+
+/* 头部 */
+.bgc {
+    background: url(../media/p2-header.jpg) no-repeat fixed center;
+    background-size: 100% 100%;
+}
+
+/* 头部标题 */
+.slogan {
+    line-height: 100px;
+    font-size: 100px;
+    height: 100px;
+    color: #d33f1c;
+    font-family: myFont;
+}
+
+/* s1 */
+.s1 {
+    position: relative;
+    height: 600px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.s1 .tittle {
+    position: absolute;
+    top: 108px;
+    left: 214px;
+    font-size: 80px;
+    background-color: #262424;
+    height: 70px;
+    width: 200px;
+    font-family: myFont;
+    color: white;
+}
+
+.s1 .box {
+    height: 300px;
+    width: 800px;
+    position: absolute;
+    text-align: center;
+    border: 2px solid #f46a40;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -400px;
+    font-size: 20px;
+    color: white;
+    font-family: 'SimSun';
+    padding: 85px 0;
+}
+
+.s1 .box span {
+    font-family: myFont;
+}
+
+.s1 .mash {
+    position: absolute;
+    background-color: #262424;
+    top: 108px;
+    left: 175px;
+    width: 40px;
+    height: 80px;
+
+}
+
+/* s2 */
+.s2 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    font-family: myFont;
+    color: white;
+}
+
+.s2 .first {
+    position: absolute;
+    top: 39px;
+    left: 241px;
+    font-size: 130px;
+}
+
+.s2 .text {
+    position: absolute;
+    top: 59px;
+    left: 369px;
+    font-size: 70px;
+}
+
+/* s3 */
+
+.s3 {
+    position: relative;
+    width: 100%;
+    height: 850px;
+    background: url(../media/p2-fire.jpg) scroll center no-repeat;
+    background-size: 100%;
+    font-size: 90px;
+    color: #b6a79e;
+    font-family: myFont;
+    margin-bottom: 100px;
+}
+
+.s3 .tittle1 {
+    position: absolute;
+    top: 150px;
+    left: 500px;
+    margin: 0 auto;
+    width: 30px;
+    line-height: 95px;
+}
+
+.s3 .tittle2 {
+    position: absolute;
+    top: 374px;
+    left: 400px;
+    margin: 0 auto;
+    width: 30px;
+    line-height: 95px;
+}
+
+.s3 .text {
+    position: absolute;
+    top: 373px;
+    left: 661px;
+    font-size: 25px;
+    font-family: 'SimSun';
+    color: white;
+}
+
+.map {
+    
+    width: 1200px;
+    margin: 0 auto;
+    height: 600px;
+}
+
+/* s4 */
+.s4 {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    text-align: center;
+    font-family: 'SimSun';
+    color: white;
+}
+
+.s4 .posi {
+    position: absolute;
+}
+
+.s4 .c1 {
+    width: 270px;
+    height: 270px;
+    border-radius: 135px;
+    background-color: rgba(156, 100, 72, 0.5);
+    top: 101px;
+    left: 317px;
+    padding-top: 96px;
+    transition: all 0.3s ease;
+}
+
+.s4 .c2 {
+    width: 320px;
+    height: 320px;
+    border-radius: 180px;
+    background-color: rgba(151, 79, 68, 0.5);
+    top: 46px;
+    left: 530px;
+    padding-top: 111px;
+    transition: all 0.3s ease;
+}
+
+.s4 .c3 {
+    width: 350px;
+    height: 350px;
+    border-radius: 175px;
+    background-color: rgba(94, 76, 101, 0.5);
+    top: 271px;
+    left: 307px;
+    padding-top: 110px;
+    z-index: 5;
+    transition: all 0.3s ease;
+}
+
+.s4 .c4 {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    background-color: rgba(151, 79, 68, 0.5);
+    top: 308px;
+    left: 565px;
+    padding-top: 133px;
+    transition: all 0.3s ease;
+}
+
+.s4 .c5 {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: rgba(162, 123, 119, 0.5);
+    top: 490px;
+    left: 278px;
+    transition: all 0.3s ease;
+}
+
+.s4 .c1:hover {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    top: 86px;
+    left: 302px;
+}
+.s4 .c2:hover {
+    width: 350px;
+    height: 350px;
+    border-radius: 195px;
+    top: 31px;
+    left: 515px;
+    padding-top: 111px;
+}
+.s4 .c3:hover {
+    width: 380px;
+    height: 380px;
+    border-radius: 190px;
+    top: 256px;
+    left: 292px;
+    padding-top: 110px;
+    z-index: 5;
+}
+.s4 .c4:hover {
+    width: 330px;
+    height: 330px;
+    border-radius: 165px;
+    background-color: rgba(151, 79, 68, 0.5);
+    top: 293px;
+    left: 550px;
+    padding-top: 133px;
+}
+
+.s4 .c5:hover {
+    width: 230px;
+    height: 230px;
+    border-radius: 115px;
+    background-color: rgba(162, 123, 119, 0.5);
+    top: 475px;
+    left: 253px;
+}
+
+
+/* s5 */
+.s5 {
+    /* text-align: center; */
+    width: 100%;
+    height: 320px;
+    padding-left: 450px;
+}
+
+
+/* s6 */
+.s6 {
+    position: relative;
+    color: white;
+    font-family: 'SimSun';
+    background: url(../media/p2-drought.jpg) no-repeat scroll center;
+    width: 100%;
+    height: 600px;
+    background-size: 100%;
+    font-size: 20px;
+}
+
+.s6 span {
+    font-family: myFont;
+}
+
+.s6 .word{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.s6 .text1 {
+    position: absolute;
+    left: 141px;
+    top: 144px;
+}
+
+.s6 .text2 {
+    position: absolute;
+    width: 998px;
+    top: 185px;
+    left: 757px;
+}
+.s6 .text3 {
+    position: absolute;
+    left: 141px;
+    top: 310px;
+}
+
+.s6 .tittle1 {
+    position: absolute;
+    margin: 0 auto;
+    width: 30px;
+    line-height: 95px;
+    left: 493px;
+    top: 250px;
+    font-size: 90px;
+    color: #b5a79d;
+    font-family: myFont;
+}
+
+.s6 .tittle2 {
+    position: absolute;
+    margin: 0 auto;
+    width: 30px;
+    line-height: 95px;
+    left: 610px;
+    top: 50px;
+    font-size: 90px;
+    color: #b5a79d;
+    font-family: myFont;
+}
+
+/* s7 */
+
+.s7{
+    height: 150px;
+    width: 100%;
+}
+/* s8 */
+.s8 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    color: white;
+}
+
+.s8 span {
+    font-family: myFont;
+}
+
+.s8 .tittle {
+    position: absolute;
+    margin: 0 auto;
+    width: 30px;
+    line-height: 107px;
+    left: 1010px;
+    top: -450px;
+    font-size: 90px;
+    color: #b5a79d;
+    font-family: myFont;
+}
+
+.s8 .text {
+    position: absolute;
+    color: white;
+    font-family: 'SimSun';
+    font-size: 20px;
+    top: -50px;
+    left: 200px;
+}
+
+.s8 .graph {
+    position: absolute;
+    top: 374px;
+    left: 185px;
+}
+
+.s8 .graph img {
+    width: 700px;
+    height: 350px;
+}
+
+/* s9 */
+.s9 {
+    width: 100%;
+    height: 800px;
+    text-align: center;
+    
+    background: url(../media/p2-health.jpg) no-repeat scroll center;
+    background-size: 100% 130%;
+}
+
+.s9 .mask{
+    float: left;
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.s9 .tittle {
+    font-family: myFont;
+    color: #9c8f88;
+    font-size: 90px;
+    margin-top: 100px;
+}
+
+.s9 .text {
+    font-size: 20px;
+    color: white;
+    font-family: 'SimSun';
+}
+
+/* s10 */
+.s10 {
+    margin-top: 200px;
+    position: relative;
+    font-family: myFont;
+    color: #d3240d;
+    font-size: 60px;
+    width: 100%;
+    height: 400px;
+}
+
+.s10 .text1 {
+    position: absolute;
+    color: white;
+    top: 50px;
+    left: 610px;
+}
+
+.s10 .text2 {
+    position: absolute;
+    top: 150px;
+    left: 200px;
+}

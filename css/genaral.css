@@ -1,0 +1,101 @@
+/* 通用的样式 */
+body {
+    background-color: #262424;
+}
+
+
+@font-face {
+    font-family: myFont;
+    src: url('../media/myfont.TTF');
+}
+
+/* 版心 */
+.w {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+/* 导航 */
+.nav {
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.65);
+    position: sticky;
+    top: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.nav .tittle {
+    float: left;
+    margin-left: 80px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 70px;
+    font-weight: bold;
+}
+
+/* 导航栏字体 */
+.nav ul li {
+    float: right;
+}
+
+.nav ul li {
+    display: block;
+    line-height: 70px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.nav ul li a {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+    line-height: 70px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* 导航栏鼠标经过变色 */
+.nav a:hover {
+    color: red;
+    
+}
+
+/* 跳转 */
+.jmp {
+
+    width: 100%;
+    background-color: black;
+    height: 300px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 70px;
+    font-weight: bold;
+    padding-top: 100px;
+}
+
+.jmp a:hover {
+    color: red;
+}
+
+/* 表格的标题 */
+.chart_tittle{
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    color: white;
+}
+
+/* 注释 */
+
+.remark{
+    margin-bottom: 100px;
+    margin-top: 50px;
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+    padding-left: 200px;
+}

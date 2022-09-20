@@ -1,0 +1,386 @@
+
+/* 头部 */
+.header{
+    position: relative;
+    width: 100%;
+    height: 900px;
+    text-align: center;
+    background-color: #fff;
+    padding-bottom: 50px;
+}
+
+/* 头部 */
+.bgc{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../media/p4-tittle.png) no-repeat scroll center;
+    background-size: 60% 100%;
+}
+
+/* 头部标题 */
+
+.little_slogan{
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    width: 1000px;
+    margin-left: -500px;
+    line-height: 100px;
+    font-size: 40px;
+    height: 100px;
+    color: black;
+    font-family: 'STHeiti Light';
+    z-index: 5;
+}
+
+/* s1 */
+.s1{
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-family: 'SimHei';
+    margin-top: 100px;
+}
+
+.s1 .text1{
+    position: absolute;
+    width: 1000px;
+    top: 0px;
+    left: 50%;
+    margin-left: -500px;
+}
+
+.s1 .text2{
+    position: absolute;
+    top: 150px;
+    width: 1000px;
+    font-size: 40px;
+    left: 50%;
+    margin-left: -500px;
+}
+.s1 .txt{
+    position: absolute;
+    top: 328px;
+    width: 1000px;
+    font-size: 40px;
+    left: 50%;
+    margin-left: -91px;
+}
+.s1 .image{
+    position: absolute;
+    top: 218px;
+    left: -5px;
+    width: 800px;
+    height: 600px;
+
+}
+.s1 .text3{
+    position: absolute;
+    top: 725px;
+    width: 1000px;
+    left: 50%;
+    margin-left: -462px;
+}
+.s1 span{
+    font-family: 'myFont';
+}
+
+/* s2 */
+
+.s2{
+    position: relative;;
+    width: 100%;
+    height: 900px;
+    text-align: center;
+    background: url(../media/p4-carbon.jpg) no-repeat scroll center;
+    background-size: 100% 100%;
+    color: white;
+}
+
+.s2 .t1{
+    position: absolute;
+    width: 1000px;
+    top: 200px;
+    font-size: 80px;
+    left: 50%;
+    margin-left: -500px;
+}
+
+.s2 .t1_en{
+    position: absolute;
+    width: 1000px;
+    top: 300px;
+    font-size: 40px;
+    left: 50%;
+    margin-left: -500px;
+}
+
+.s2 .t2{
+    position: absolute;
+    width: 1000px;
+    top: 468px;
+    font-size: 80px;
+    left: 50%;
+    margin-left: -500px;
+}
+
+.s2 .t2_en{
+    position: absolute;
+    width: 1000px;
+    top: 570px;
+    font-size: 40px;
+    left: 50%;
+    margin-left: -500px;
+}   
+
+/* s3 */
+.s3{
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    text-align: left;
+    color: white;
+    font-family: 'SimHei';
+}
+
+.s3 .text1{
+    position: absolute;
+    width: 1000px;
+    font-size: 25px;
+    left: 50%;
+    margin-left: -500px;
+    top: 50px;
+}
+.s3 .text2{
+    position: absolute;
+    width: 1000px;
+    font-size: 25px;
+    left: 50%;
+    margin-left: -500px;
+    top: 230px;
+}
+.s3 .text3{
+    position: absolute;
+    width: 1000px;
+    font-size: 25px;
+    left: 50%;
+    margin-left: -500px;
+    top: 550px;
+}
+.s3 .text4{
+    position: absolute;
+    width: 1000px;
+    font-size: 25px;
+    left: 50%;
+    margin-left: -500px;
+    top: 670px;
+}
+.s3 .text5{
+    position: absolute;
+    width: 1000px;
+    font-size: 25px;
+    left: 50%;
+    margin-left: -500px;
+    top: 800px;
+}
+.s3 span{
+    font-size: 60px;
+}
+.s3 .arrow{
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    background-color: transparent;
+    top: 396px;
+    left: 480px;
+}
+.s3 .body{
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    top: 0;
+    left: 25px;
+    background-color: #edb3a4;
+}
+.s3 .head{
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    border: 50px solid transparent;
+    border-top-color: #edb3a4;
+    line-height: 0;
+    font-style: 0;
+    left: 0;
+    top: 80px;
+}
+
+/* s4 */
+.s4{
+    position: relative;;
+    width: 100%;
+    height: 900px;
+    text-align: center;
+    background: url(../media/p4-people.jpg) no-repeat scroll center -200px;
+    background-size: 100% 125%;
+    color: white;
+}
+
+.s4 .t{
+    position: absolute;
+    width: 1200px;
+    top: 250px;
+    font-size: 80px;
+    left: 50%;
+    margin-left: -600px;
+}
+
+.s4 .t_en{
+    position: absolute;
+    width: 1200px;
+    top: 360px;
+    font-size: 40px;
+    left: 50%;
+    margin-left: -600px;
+}
+
+/* s5 */
+.s5{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    text-align: left;
+    color: white;
+    font-family: 'SimHei';
+}
+.s5 .text{
+    position: absolute;
+    width: 1000px;
+    font-size: 25px;
+    left: 50%;
+    margin-left: -500px;
+    top: 50px;
+}
+.s5 span{
+    font-size: 60px;
+}
+
+/* s6 */
+
+.s6{
+    position: relative;
+    height: 800px;
+    width: 100%;
+    font-family: 'SimHei';
+    
+}
+.s6 .txt{
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    width: 220px;
+    margin-left: 40px;
+    z-index: 5;
+}
+
+.s6 .bgtxt{
+    position: absolute;
+    font-size: 85px;
+    color: rgba(217, 200, 199, 0.75);
+    top: 200px;
+    font-weight: bold;
+    
+}
+.s6 .box1{
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    border: 2px solid #aaa5a5;
+    background-color: rgba(219, 217, 217, 0.5);
+    border-radius: 50px;
+    left: 100px;
+}
+
+.s6 .box2{
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    border: 2px solid #aaa5a5;
+    background-color: rgba(219, 217, 217, 0.5);
+    border-radius: 50px;
+    left: 450px;
+}
+
+.s6 .box3{
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    border: 2px solid #aaa5a5;
+    background-color: rgba(219, 217, 217, 0.5);
+    border-radius: 50px;
+    left: 800px;
+}
+
+.s6 .box4{
+    position: absolute;
+    width: 1000px;
+    height: 300px;
+    border: 2px solid #aaa5a5;
+    background-color: rgba(219, 217, 217, 0.5);
+    border-radius: 50px;
+    top: 420px;
+    left: 100px;
+}
+
+.s6 .box4 .txt{
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    width: 900px;
+    margin-left: 100px;
+    top: 85px;
+
+}
+
+/* s7 */
+.s7{
+    position: relative;
+    height: 900px;
+    width: 100%;
+    color: white;
+}
+.s7 .tittle{
+    position: absolute;
+    font-size: 35px;
+    font-family: myFont;
+    left: 1150px;
+    top: 295px;
+}
+.s7 .txt{
+    position: absolute;
+    font-size: 20px;
+    font-family: 'SimHei';
+    left: 1150px;
+    top: 355px;
+}
+
+.s7 .image{
+    position: absolute;
+    width: 800px;
+    height: 500px;
+    background: url(../media/p4-hands.jpg) no-repeat scroll center;
+    background-size: 100% 100%;
+    top: 150px;
+    left: 300px;
+}
+
+.s7 .bgtxt{
+    position: absolute;
+    bottom: 0;
+    font-size: 185px;
+    color: rgba(217, 200, 199, 0.75);
+    font-weight: bold;
+}
