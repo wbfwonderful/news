@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/genaral.css">
+    <link rel="stylesheet" href="css/page2.css">
+    <link rel="shortcut icon" href=" media/favicon.ico" />
+    <script src="js/echarts.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+
+    <title>全球高温创造历史：“热”点下的冰点</title>
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <div class="nav">
+
+        <div class="tittle">
+            <a href="index.html">全球高温创造历史：“热”点下的冰点</a>
+        </div>
+
+        <ul>
+            <li><a href="page5.html">冰与火的较量，从不独行</a></li>
+            <li>|</li>
+            <li><a href="page4.html">抚平高温的褶皱</a></li>
+            <li>|</li>
+            <li><a href="page3.html">哭泣的背后</a></li>
+            <li>|</li>
+            <li><a href="#" style="color: red">没有泪水的哀鸣</a></li>
+
+        </ul>
+
+    </div>
+
+    <!-- 正文  -->
+    <div>
+        <!-- 正文里的头部 -->
+        <div class="header bgc">
+            <div class="slogan">“<span style="color: #a02912">没有泪水</span>的哀鸣 <span
+                    style="color: #c50c01; font-size: 120px"> ”</span></div>
+            <div style="font-size: 50px; font-family: Heiti;color: #a02912">The wail without tears.</div>
+        </div>
+        <!-- 正文-版心 -->
+        <div class="w">
+
+            <!-- s1 -->
+            <div class="s1">
+
+
+
+                <div class="box">
+                    据国家气候中心监测显示，6月以来（截至7月12日），我国<span>平均高温日数 <br>
+                        5.3天</span>，较常年同期<span>偏多2.4天</span>，为1961年以来历史同期最多。而6月13日以 <br>
+                    来，我国出现今年首次区域性高温天气过程，范围广、持续时间长、极端性 <br>
+                    强、影响大。
+                </div>
+                <div class="tittle">
+                    今年
+                </div>
+
+            </div>
+            <!-- s4 -->
+            <div class="s4">
+
+                <div class="c1 posi" style="font-size: 25px;">
+                    高温事件已 <br>
+                    持续30多天
+                </div>
+
+                <div class="c2 posi" style="font-size: 36px;">
+                    影响人口 <br>
+                    超过9亿人
+                </div>
+
+                <div class="c3 posi" style="font-size: 28px;">
+                    覆盖国土面积达 <br>
+                    502.1万平方公里
+                </div>
+
+                <div class="c4 posi" style="font-size: 32px;">
+                    截至7月12日
+                </div>
+
+                <div class="c5 posi">
+
+                </div>
+
+            </div>
+            <div class="remark" style="padding-left: 271px;">
+                数据来源:中国新闻网.《持续高温影响全国超9亿人!还要热多久？》
+
+            </div>
+
+            <!-- s2 -->
+            <div class="s2">
+                <div class="first">而</div>
+                <div class="text">
+                    <span style="color: #d6190b;">创高温记录</span>带来的<br>
+
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;却不仅仅是......</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- s3 -->
+        <div class="s3">
+            <div class="tittle1">
+                熊熊燃烧
+            </div>
+
+            <div class="tittle2">
+                的山火
+            </div>
+
+            <div class="text">
+                气候变化导致全球气温升高、干旱加剧，并使得天气更为极端，野火更加 <br>
+                频繁、更具破坏性。据美国加州林业和消防局报道，2022年9月的一场山 <br>
+                火席卷旧金山东北部内华达山脉地区，短短几天，过火面积已经<span style="font-family: myFont;">超过160平方公里</span>。
+            </div>
+
+
+        </div>
+
+        <div class="w">
+            <div class="chart_tittle">图3:近两个月美国山火发生频率</div>
+            <div class="map">
+                <div id="USAMap" style="width: 1200px;height:600px;"></div>
+            </div>
+            <div class="remark" style="padding-left: 0px;">
+                数据来源:InciWeb-Incident Information System.(数据收集截止到9月18日）
+
+            </div>
+            <script>
+                // 美国地图
+                USAMap();
+
+                function USAMap() {
+                    var myChart = echarts.init(document.getElementById("USAMap"));
+                    // 开启加载loading的动画
+                    myChart.showLoading();
+                    // jquery读取json文件
+                    $.get('./geo/USA.json', function (usaJson) {
+                        // 隐藏loading的动画
+                        myChart.hideLoading();
+                        echarts.registerMap('USA', usaJson, {
+                            // 把阿拉斯加移到美国主大陆左下方
+                            Alaska: {
+                                left: -131,
+                                top: 25,
+                                width: 15
+                            },
+                            // 夏威夷
+                            Hawaii: {
+                                left: -110,
+                                top: 28,
+                                width: 5
+                            },
+                            // 波多黎各（因为名字有空格，所以写为字符串的形式）
+                            'Puerto Rico': {
+                                left: -76,
+                                top: 26,
+                                width: 2
+                            }
+                        });
+                        option = {
+
+                            // 提示框组件
+                            tooltip: {
+                                trigger: 'item',
+                                // 浮层显示的延迟
+                                showDelay: 0,
+                                // 提示框浮层的移动动画过渡时间
+                                transitionDuration: 0.2,
+                                // 按要求的格式显示提示框
+                                formatter: function (params) {
+                                    var value = (params.value + '').split('.');
+                                    value = value[0].replace(/(\d{1,3})(?=(?:\d{3})+(?!\d))/g, '$1,');
+                                    return params.seriesName + '<br/>' + params.name + ': ' + value;
+                                }
+                            },
+                            // 可视映射
+                            visualMap: {
+                                left: 'right',
+                                min: 0,
+                                max: 29,
+                                // 颜色区间
+                                inRange: {
+                                    color: ['#ffffbf', '#fee090', '#fdae61', '#f46d43', '#d73027', '#a50026']
+                                },
+                                // 文本，默认为数值文本
+                                text: ['次数', ''],
+                                // 显示拖拽用的手柄
+                                calculable: true
+                            },
+                            // 工具盒
+                            toolbox: {
+                                show: true,
+                                //orient: 'vertical',
+                                left: 'left',
+                                top: 'top',
+                                feature: {
+                                    // 数据视图
+                                    dataView: { readOnly: false },
+                                    // 还原
+                                    restore: {},
+                                    // 保存为图片
+                                    saveAsImage: {}
+                                }
+                            },
+                            series: [
+                                {
+                                    name: '山火发生次数',
+                                    type: 'map',
+                                    // 开启鼠标缩放和平移漫游
+                                    roam: true,
+                                    map: 'USA',
+                                    // 显示标签
+                                    emphasis: {
+                                        label: {
+                                            show: true
+                                        }
+                                    },
+                                    // 文本位置修正
+                                    textFixed: {
+                                        Alaska: [20, -20]
+                                    },
+                                    data: [
+                                        { name: 'Alabama', value: 0 },
+                                        { name: 'Alaska', value: 7 },
+                                        { name: 'Arizona', value: 6 },
+                                        { name: 'Arkansas', value: 0 },
+                                        { name: 'California', value: 21 },
+                                        { name: 'Colorado', value: 2 },
+                                        { name: 'Connecticut', value: 0 },
+                                        { name: 'Delaware', value: 0 },
+                                        { name: 'District of Columbia', value: 0 },
+                                        { name: 'Florida', value: 0 },
+                                        { name: 'Georgia', value: 0 },
+                                        { name: 'Hawaii', value: 0 },
+                                        { name: 'Idaho', value: 24 },
+                                        { name: 'Illinois', value: 0 },
+                                        { name: 'Indiana', value: 0 },
+                                        { name: 'Iowa', value: 0 },
+                                        { name: 'Kansas', value: 0 },
+                                        { name: 'Kentucky', value: 0 },
+                                        { name: 'Louisiana', value: 0 },
+                                        { name: 'Maine', value: 0 },
+                                        { name: 'Maryland', value: 0 },
+                                        { name: 'Massachusetts', value: 0 },
+                                        { name: 'Michigan', value: 0 },
+                                        { name: 'Minnesota', value: 0 },
+                                        { name: 'Mississippi', value: 0 },
+                                        { name: 'Missouri', value: 0 },
+                                        { name: 'Montana', value: 29 },
+                                        { name: 'Nebraska', value: 0 },
+                                        { name: 'Nevada', value: 6 },
+                                        { name: 'New Hampshire', value: 0 },
+                                        { name: 'New Jersey', value: 0 },
+                                        { name: 'New Mexico', value: 10 },
+                                        { name: 'New York', value: 0 },
+                                        { name: 'North Carolina', value: 0 },
+                                        { name: 'North Dakota', value: 0 },
+                                        { name: 'Ohio', value: 0 },
+                                        { name: 'Oklahoma', value: 0 },
+                                        { name: 'Oregon', value: 0 },
+                                        { name: 'Pennsylvania', value: 0 },
+                                        { name: 'Rhode Island', value: 0 },
+                                        { name: 'South Carolina', value: 0 },
+                                        { name: 'South Dakota', value: 0 },
+                                        { name: 'Tennessee', value: 0 },
+                                        { name: 'Texas', value: 20 },
+                                        { name: 'Utah', value: 3 },
+                                        { name: 'Vermont', value: 0 },
+                                        { name: 'Virginia', value: 0 },
+                                        { name: 'Washington', value: 16 },
+                                        { name: 'West Virginia', value: 0 },
+                                        { name: 'Wisconsin', value: 0 },
+                                        { name: 'Wyoming', value: 1 },
+                                        { name: 'Puerto Rico', value: 0 }
+                                    ]
+                                }
+                            ]
+                        };
+
+                        myChart.setOption(option);
+                    });
+                }
+
+
+            </script>
+
+
+
+
+
+            <!-- s6 -->
+            <div class="s6">
+                <div class="word">
+
+                    <div class="text1">
+                        中国于2022年8月发出本年度第一个全 <br>
+                        国性干旱预警，长江水位目前处于历 <br>
+                        史<span>最低水平</span>，长江的主要支流嘉陵江 <br>
+                        的部分流域罕见露出河床。
+                    </div>
+                    <div class="tittle1">
+                        的河床
+                    </div>
+                    <div class="tittle2">
+                        干涸龟裂
+                    </div>
+                    <div class="text2">
+                        在世界范围内来看，位于欧洲南部的 <br>
+                        意大利更是难以幸免，可以说是目前 <br>
+                        受到持续干旱影响最为严重的国家之 <br>
+                        一。意大利最长河流波河（River Po） <br>
+                        已经<span>濒临干涸</span>。由于自去年11月以来 <br>
+                        就没有发生持续降雨，目前波河流域 <br>
+                        的水位已低于2米，<span>降至正常水平的十 <br>
+                            分之一</span>，在某些区域波河甚至已经完 <br>
+                        全断流。 <br>
+                    </div>
+
+                    <div class="text3">
+                        2021年8月23日，嘉陵江北碚站点 <br>
+                        的水位是<span>11.26米</span>， <br>
+                        但一年后的2022年8月23日， <br>
+                        却<span>仅有0.12米</span>。
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <!-- s7 -->
+            <div class="s7">
+
+            </div>
+        </div>
+        <!-- s5 -->
+        <div class="chart_tittle">图4:2013-2022年6-8月全国平均降水量 </div>
+        <div class="s5">
+            <div id="chart_water" style="width: 800px;height: 400px;"></div>
+            <script>
+                var app = {};
+
+                var chartDom = document.getElementById('chart_water');
+                var myChart = echarts.init(chartDom);
+                var option;
+
+                const posList = [
+                    'left',
+                    'right',
+                    'top',
+                    'bottom',
+                    'inside',
+                    'insideTop',
+                    'insideLeft',
+                    'insideRight',
+                    'insideBottom',
+                    'insideTopLeft',
+                    'insideTopRight',
+                    'insideBottomLeft',
+                    'insideBottomRight'
+                ];
+                app.configParameters = {
+                    rotate: {
+                        min: -90,
+                        max: 90
+                    },
+                    align: {
+                        options: {
+                            left: 'left',
+                            center: 'center',
+                            right: 'right'
+                        }
+                    },
+                    verticalAlign: {
+                        options: {
+                            top: 'top',
+                            middle: 'middle',
+                            bottom: 'bottom'
+                        }
+                    },
+                    position: {
+                        options: posList.reduce(function (map, pos) {
+                            map[pos] = pos;
+                            return map;
+                        }, {})
+                    },
+                    distance: {
+                        min: 0,
+                        max: 100
+                    }
+                };
+                app.config = {
+                    rotate: 90,
+                    align: 'left',
+                    verticalAlign: 'middle',
+                    position: 'insideBottom',
+                    distance: 15,
+                    onChange: function () {
+                        const labelOption = {
+                            rotate: app.config.rotate,
+                            align: app.config.align,
+                            verticalAlign: app.config.verticalAlign,
+                            position: app.config.position,
+                            distance: app.config.distance
+                        };
+                        myChart.setOption({
+                            series: [
+                                {
+                                    label: labelOption
+                                },
+                                {
+                                    label: labelOption
+                                },
+                                {
+                                    label: labelOption
+                                },
+                                {
+                                    label: labelOption
+                                }
+                            ]
+                        });
+                    }
+                };
+                const labelOption = {
+                    show: true,
+                    position: app.config.position,
+                    distance: app.config.distance,
+                    align: app.config.align,
+                    verticalAlign: app.config.verticalAlign,
+                    rotate: app.config.rotate,
+                    formatter: '{c}  {name|{a}}',
+                    fontSize: 16,
+                    rich: {
+                        name: {}
+                    }
+                };
+                option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'shadow'
+                        }
+                    },
+                    legend: {
+                        data: ['6月', '7月', '8月'],
+                        textStyle: {
+                            color: "#fff",
+
+                        },
+                    },
+                    toolbox: {
+                        show: true,
+                        orient: 'vertical',
+                        left: 'right',
+                        top: 'center',
+                        feature: {
+                            mark: { show: true },
+                            dataView: { show: true, readOnly: false },
+                            magicType: { show: true, type: ['line', 'bar', 'stack'] },
+                            restore: { show: true },
+                            saveAsImage: { show: true }
+                        }
+                    },
+                    xAxis: [
+                        {
+                            name: '年份',
+                            nameTextStyle: {
+                                color: "#fff",
+                            },
+                            type: 'category',
+                            axisTick: { show: false },
+                            data: [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            name: '降水量',
+                            nameTextStyle: {
+                                color: "#fff",
+                            },
+                            type: 'value'
+                        }
+                    ],
+                    series: [
+                        {
+                            name: '6月',
+                            type: 'bar',
+                            barGap: 0,
+                            label: labelOption,
+                            emphasis: {
+                                focus: 'series'
+                            },
+                            data: [112.1, 91.3, 112, 98.8, 93, 112.3, 110.9, 104.8, 100.7, 98.2],
+                            itemStyle: {    //柱状颜色和圆角
+                                color: '#3d5a80',
+                            },
+
+                        },
+                        {
+                            name: '7月',
+                            type: 'bar',
+                            label: labelOption,
+                            emphasis: {
+                                focus: 'series'
+                            },
+                            data: [96.6, 124.2, 124, 124.4, 133.8, 112.5, 132.8, 88.7, 115, 138.9],
+                            itemStyle: {    //柱状颜色和圆角
+                                color: '#98c1d9',
+                            },
+                        },
+                        {
+                            name: '8月',
+                            type: 'bar',
+                            label: labelOption,
+                            emphasis: {
+                                focus: 'series'
+                            },
+                            data: [101.4, 105.1, 93.8, 124.6, 103.9, 126.3, 135, 118.3, 82.4],
+                            itemStyle: {    //柱状颜色和圆角
+                                color: '#e0fbfc',
+                            },
+                        },
+
+                    ]
+                };
+
+                option && myChart.setOption(option);
+
+
+
+            </script>
+
+        </div>
+        <div class="remark" style="padding-left: 534px">
+            数据来源:中国气象局
+        </div>
+
+        <div class="w">
+            <div class="s8">
+                <div class="tittle">
+                    捉襟见肘的电力
+                </div>
+
+                <div class="text">
+                    2022年7月以来，全国<span>平均降水量 96.6 毫米</span>，较常年同期<span>偏少20.6％</span>。 <br><br>
+                    四川作为拥有8000多万人口的中国人口最多的省份之一，也是重要的工 <br>
+                    业基地。当地近8成电力供应原本来自水力发电。但由于今年的高温和干 <br>
+                    旱，全省水电发电能力下降5成以上 <br> <br>
+                    由于四川还是中国“西电东送”工程的重要输送方，还供应着上海、江 <br>
+                    苏、浙江等多个省市的电力，四川的电荒也让这些沿海省份面临供电压力。 <br> <br><br>
+
+                    与此同时，高温导致用电量激增。当局首先限制了工业用电， <br>
+                    很多大型制造厂表示因限电生产受到影响。第一财经报道说， <br>
+                    四川是中国显示面板产业的重要生产基地之一，此前连续停 <br>
+                    电已造成相关产业不得不维持低生产率运转。
+                </div>
+
+                <!-- <div class="graph">
+                    <img src="media/p2-electricity.png" alt="">
+                </div> -->
+
+
+            </div>
+        </div>
+        <!-- s9 -->
+        <div class="s9">
+            <div class="mask">
+                <div class="tittle">
+                    健康状况的威胁
+                </div>
+
+                <div class="text">
+                    一项发表在《柳叶刀-星球健康》的研究显示，由全球气温升高导致的 <br>
+                    额外死亡率正在逐渐上升。从2000-2003年的0.83%上升至2016-2019 <br>
+                    年的1.04%，相当于高温造成全球每年近50万的额外死亡。 <br> <br><br>
+
+                    在全球范围内，每年有5,083,173例死亡与非最适温度有关， <br>
+                    其中包括<span style="font-family: myFont;">4,594,098例冷死亡</span>和<span
+                        style="font-family: myFont;">489,075例热死亡</span>。 <br> <br><br>
+
+                    在所有超额死亡中，51.49%发生在亚洲，23.88%发生在非洲，16.44%发生在 <br>
+                    欧洲，7.70%发生在美洲，0.48%发生在大洋洲。超额死亡密度高的地区是东 <br>
+                    亚和南亚的低洼、拥挤的沿海城市、东欧和西欧城市。 
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="w">
+            <!-- s10 -->
+            <div class="s10">
+                <div class="text1">
+                    高温的<span style="color: #d3240d; font-size: 90px;">警示，</span>
+                </div>
+                <br>
+
+                <div class="text2">
+                    已经立竿见影在人类的身体上。
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 跳转到下一页 -->
+    <div class="jmp">
+        <a href="page3.html"> &gt; &gt;哭泣的背后</a>
+    </div>
+
+</body>
+
+</html>
